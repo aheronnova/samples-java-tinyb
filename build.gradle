@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+}
+
+version = '1.0'
+
+mainClassName = "org.acheron.sample.bluez.Notification"
+
+jar {
+    manifest.attributes provider: 'gradle'
+}
+
